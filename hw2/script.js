@@ -1,7 +1,7 @@
-let forceValue = prompt('Введіть значення сили F', '');
-let massValue = prompt('Введіть значення маси m', '');
+const forceValue = prompt('Введіть значення сили F', '');
+const massValue = prompt('Введіть значення маси m', '');
 
-let accelerationValue = forceValue / massValue; 
+const accelerationValue = forceValue / massValue; 
 
 document.write(`
   <p>**************</p>
