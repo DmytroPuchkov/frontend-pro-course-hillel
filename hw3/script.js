@@ -1,6 +1,6 @@
-let studentInfo = undefined;
-let studentAge = undefined;
-let averageAge = undefined;
+let studentInfo = null;
+let studentAge = null;
+let averageAge = null;
 
 console.log(`**************`);
 console.log(`Список студентів, що зареєструвалися на вебінар:`);
