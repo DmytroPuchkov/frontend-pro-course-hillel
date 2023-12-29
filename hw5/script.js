@@ -30,5 +30,4 @@ switch (true) {
 //     } else {
 //       console.log('OK!');
 //     }
-//     break;
 // }
