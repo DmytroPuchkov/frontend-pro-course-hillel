@@ -1,7 +1,7 @@
-let whoIs = prompt('Хто прийшов?');
+const whoIs = prompt('Хто прийшов?');
 
 if (whoIs === 'Адмін') {
-  let yourPass = prompt ('Пароль?');
+  const yourPass = prompt('Пароль?');
   if (yourPass === 'Чорний володар') {
     alert ('Ласкаво просимо!');
   } else if (yourPass === null) {
