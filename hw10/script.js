@@ -1,4 +1,4 @@
-const arr = [];
+const arrA = [];
 const min = 1;
 const max = 25;
 let n;
@@ -8,18 +8,18 @@ while (n <= 0 || isNaN(n)) {
 }
 
 for (let i = 0; i < n; i++) {
-  arr[i] = Math.floor(Math.random() * (max - min + 1) + min);
+  arrA[i] = Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function sortArray(a, b) {
   return (a - b);
 }
 
-arr.sort(sortArray);
+arrA.sort(sortArray);
 
-const arr2 = arr.slice(1, n - 1);
+const arrB = arrA.slice(1, n - 1);
 
-console.log('Масив A:', arr);
-console.log('Мінімальне число в масиві A:', arr[0]);
-console.log('Максимальне число в масиві A:', arr.at(-1));
-console.log(`Масив B (числа між ${arr[0]} та ${arr.at(-1)}):`, arr2);
+console.log('Масив A:', arrA);
+console.log('Мінімальне число в масиві A:', arrA[0]);
+console.log('Максимальне число в масиві A:', arrA.at(-1));
+console.log(`Масив B (числа між ${arrA[0]} та ${arrA.at(-1)}):`, arrB);
