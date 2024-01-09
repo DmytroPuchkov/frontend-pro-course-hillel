@@ -1,8 +1,8 @@
 const n = 3;
 const m = 3;
 const sum = [];
-let maxCol;
-let minCol;
+let maxCol = 0;
+let minCol = 0;
 
 const arr = [];
 
@@ -25,18 +25,7 @@ for (let i = 0; i < n; i++) {
 
   sum.push(total);
 
-  if (i === 0) {
-    minCol = 0;
-    maxCol = 0;
-  }
-
-  if (i === 0 || total < sum[minCol]) {
-    minCol = i;
-  }
-
-  if (total > sum[maxCol]) {
-    maxCol = i;
-  }
+  total < sum[minCol] ? minCol = i : maxCol = i;
 };
 
 console.log(`Сума стовпчиків:`, sum);
