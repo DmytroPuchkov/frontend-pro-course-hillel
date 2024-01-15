@@ -2,13 +2,13 @@ const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 function generateKey(length, characters) {
   let randomSymbols = '';
-  let randomIndex = 0;
+  let randomPosition = 0;
 
   for (i = 0; i < length; i++) {
-    randomIndex = Math.floor(Math.random() * characters.length);
-    randomSymbols += characters.charAt(randomIndex);
+    randomPosition = Math.floor(Math.random() * characters.length);
+    randomSymbols += characters.charAt(randomPosition);
 
-    // console.log(`index:`,randomIndex, `symbol:`,randomSymbols[i]);
+    // console.log(`position:`,randomPosition, `symbol:`,randomSymbols[i]);
   }
 
   return randomSymbols;
