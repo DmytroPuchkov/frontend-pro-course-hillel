@@ -6,6 +6,7 @@ function removeElement(array, item) {
 
     if (index !== -1) {
       array.splice(index, 1);
+      i--;
     }
   }
 
