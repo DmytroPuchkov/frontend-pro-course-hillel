@@ -1,20 +1,21 @@
 // Завдання 1
 
+function renderObjectFunction() {
+  for (let key in this) {
+    if (key !== 'renderObject' && typeof this[key] !== 'function') {
+      document.write(`<div>${key}: ${this[key]}</div>`);
+    }
+  }
+}
+
 const obj = {
   car: "BMW",
   type: "sedan",
   color: "black",
-  renderObject: function () {
-    for (let key in this) {
-      if (key !== 'renderObject' && typeof this[key] !== 'function') {
-        document.write(`<div>${key}: ${this[key]}</div>`);
-      }
-    }
-  }
+  renderObject: renderObjectFunction
 };
 
-window.renderObject = obj.renderObject.bind(obj);
-window.renderObject();
+obj.renderObject();
 
 // Завдання 2
 
