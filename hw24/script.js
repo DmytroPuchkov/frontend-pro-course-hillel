@@ -13,7 +13,8 @@ const obj = {
   }
 };
 
-obj.renderObject();
+window.renderObject = obj.renderObject.bind(obj);
+window.renderObject();
 
 // Завдання 2
 
