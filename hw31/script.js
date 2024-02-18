@@ -55,8 +55,16 @@ let users = [
   }
 ];
 
-const phoneUsersNumbers = users.filter(user => parseFloat(user.balance.slice(1).replace(',', '')) > 2000).map(user => user.phone);
-const totalUsersBalance = users.reduce((acc, user) => acc + parseFloat(user.balance.slice(1).replace(',', '')), 0);
+const highBalance = 2000;
 
-console.log("Телефонні номери користувачів з балансом > 2000:", phoneUsersNumbers);
+const getBalance = (balance) => parseFloat(balance.slice(1).replace(',', ''));
+const isBalanceOver = (user) => getBalance(user.balance) > highBalance;
+const getUserPhone = (user) => user.phone;
+const getPhonesWithHighBalance = (users) => users.filter(isBalanceOver).map(getUserPhone);
+const getTotalBalance = (users) => users.reduce((acc, user) => acc + getBalance(user.balance), 0);
+
+const phoneUsersNumbers = getPhonesWithHighBalance(users);
+const totalUsersBalance = getTotalBalance(users);
+
+console.log(`Телефонні номери користувачів з балансом > ${highBalance}:`, phoneUsersNumbers);
 console.log("Сума всіх балансів користувачів:", totalUsersBalance);
