@@ -24,45 +24,50 @@ const shape = {
     top: 100,
     bottom: 400,
   }),
-  lastCondition: null,
+  lastPropsTotal: null,
+  lastPropsState: "",
 
   calc() {
     return Object.values(this.props).reduce((accum, item) => accum + item, 0);
   },
 
   get perimeter() {
-    const total = this.calc();
+    const currentPropsState = JSON.stringify(this.props);
 
-    if (this.lastCondition !== total) {
+    if (this.lastPropsState !== currentPropsState) {
+      const total = this.calc();
+
       history.add({
         total: total,
         props: Object.assign({}, this.props),
       });
 
-      this.lastCondition = total;
+      this.lastPropsTotal = total;
+      this.lastPropsState = currentPropsState;
     }
 
-    return total;
+    return this.lastPropsTotal;
   },
 };
+
+shape.props.foo = "aaa";
 
 shape.perimeter;
 
 shape.props.right = 600;
+shape.perimeter;
+
+shape.props.right = 680;
+shape.perimeter;
 
 shape.perimeter;
 
-shape.props.right = 800;
+shape.props.right = 700;
+shape.props.top = 150;
+shape.props.bottom = 450;
+shape.props.left = 120;
 
 shape.perimeter;
-shape.perimeter;
-
-shape.props.left = 900;
-
-shape.perimeter;
-shape.perimeter;
-
-shape.props.foo = "aaa";
 
 console.log(shape.props);
 console.log(history.records);
