@@ -21,13 +21,17 @@ const renderProducts = async () => {
     </div>
   `);
 
-  const getProductPrice = ({ price }) => (`
-    <div class="price">${price}</div>
-  `);
+  const getProductPrice = ({ price, discountPercentage }) => {
+    const discountedPrice = price - (price * (discountPercentage / 100));
 
-  const getProductDiscount = ({ discountPercentage }) => (`
-  <div class="discount">${discountPercentage}</div>
-  `);
+    return (`
+      <div class="price">
+        <div class="price-old">$${price}</div>
+        <div class="price-off">-${discountPercentage}% OFF</div>
+        <div class="price-new">New: $${discountedPrice.toFixed(2)}</div>
+      </div>
+    `);
+  };
 
   const getProductDescription = ({ description }) => (`
     <div class="description">${description}</div>
@@ -41,7 +45,6 @@ const renderProducts = async () => {
     <div class="content-wrapper">
       ${getProductTitle(product)}
       ${getProductPrice(product)}
-      ${getProductDiscount(product)}
       ${getProductDescription(product)}
       <div class="actions">
         <button id="cart-${getProductId(product)}" class="button green-solid cart">

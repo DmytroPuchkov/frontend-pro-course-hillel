@@ -107,11 +107,41 @@ body {
   height: 100%;
 }
 
-
 .apple.smartphones {
  background-color: rgba(255, 255, 0, 0.235);
 }
 
 .apple.laptops {
   background-color: rgba(0, 128, 0, 0.327);
+}
+
+.inner-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-old {
+  text-decoration: line-through;
+}
+
+.price-off {
+  color: chocolate;
+}
+
+.price-new {
+  font-size: 20px;
+  font-weight: 900;
+  color: #95ab63;
+}
+
+.description {
+  margin: 16px 0;
 }
