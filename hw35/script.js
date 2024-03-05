@@ -20,7 +20,7 @@ console.log(arr);
 // Display Data with console.table()
 
 const hero1 = {
-  heroName: 'Kai', 
+  heroName: 'Kai',
   heroClass: 'Mag',
   health: 100,
 }
@@ -30,7 +30,7 @@ console.table(hero1);
 // Extract Object Properties with Destructuring
 
 const hero2 = {
-  heroName: 'Logan', 
+  heroName: 'Logan',
   heroClass: 'Bard',
   health: 80,
 }
@@ -40,7 +40,7 @@ console.log(hero2.heroName);
 console.log(hero2.heroClass);
 
 // Use this
-const {heroName, heroClass} = hero2;
+const { heroName, heroClass } = hero2;
 console.log(heroName);
 console.log(heroClass);
 
@@ -61,7 +61,7 @@ console.log(doubled);
 // Object.seal()
 
 const person2 = {
-  name: 'John', 
+  name: 'John',
   age: 25
 }
 
@@ -74,7 +74,7 @@ console.log(person2);
 // Object.freeze()
 
 const person3 = {
-  name: 'John', 
+  name: 'John',
   age: 25
 }
 
@@ -93,7 +93,7 @@ console.log(arrWithoutDuplicates);
 
 // Swap values using Destructuring
 
-let x = 7; 
+let x = 7;
 let y = 13;
 
 [x, y] = [y, x];
@@ -110,10 +110,10 @@ const message = `Hello, ${userName}!`;
 const age = 20;
 
 //Instead of this
-if(age>=18){
-    console.log("You can drive");
-}else{
-    console.log("You cannot drive");
+if (age >= 18) {
+  console.log("You can drive");
+} else {
+  console.log("You cannot drive");
 }
 
 //Use this
