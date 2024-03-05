@@ -99,3 +99,8 @@ let y = 13;
 [x, y] = [y, x];
 
 console.log(x);
+
+// Template Interpolation
+
+const userName = 'John';
+const message = `Hello, ${userName}!`;
