@@ -89,4 +89,13 @@ console.log(person3);
 const arrWithDuplicates = [1, 12, 2, 13, 4, 4, 13];
 const arrWithoutDuplicates = [...new Set(arrWithDuplicates)];
 
-console.log(arrWithoutDuplicates); 
+console.log(arrWithoutDuplicates);
+
+// Swap values using Destructuring
+
+let x = 7; 
+let y = 13;
+
+[x, y] = [y, x];
+
+console.log(x);
