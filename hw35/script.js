@@ -57,3 +57,17 @@ console.log(arrWithoutDuplicates);
 const userName = 'John';
 const message = `Hello, ${userName}!`;
 
+// Ternary Operator
+
+const age = 20;
+
+//Instead of this
+if (age >= 18) {
+  console.log("You can drive");
+} else {
+  console.log("You cannot drive");
+}
+
+//Use this
+age >= 18 ? console.log("You can drive") : console.log("You cannot drive");
+
