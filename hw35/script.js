@@ -22,3 +22,12 @@ Object.seal(person2);
 person.profession = "Programmer";
 
 console.log(person2);
+
+// Swap values using Destructuring
+
+let x = 7;
+let y = 13;
+
+[x, y] = [y, x];
+
+console.log(x);
