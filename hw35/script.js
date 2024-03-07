@@ -43,3 +43,9 @@ console.log(hero2.heroClass);
 const { heroName, heroClass } = hero2;
 console.log(heroName);
 console.log(heroClass);
+
+// JSON.parse()
+
+const jsonStr = '{"name": "John", "age": 25}';
+const person = JSON.parse(jsonStr);
+console.log(person);
