@@ -26,3 +26,20 @@ const hero1 = {
 }
 
 console.table(hero1);
+
+// Extract Object Properties with Destructuring
+
+const hero2 = {
+  heroName: 'Logan',
+  heroClass: 'Bard',
+  health: 80,
+}
+
+// Instead of this
+console.log(hero2.heroName);
+console.log(hero2.heroClass);
+
+// Use this
+const { heroName, heroClass } = hero2;
+console.log(heroName);
+console.log(heroClass);
