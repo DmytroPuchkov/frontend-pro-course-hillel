@@ -49,3 +49,11 @@ console.log(heroClass);
 const jsonStr = '{"name": "John", "age": 25}';
 const person = JSON.parse(jsonStr);
 console.log(person);
+
+// Map() Function
+
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(num => num * 2);
+
+console.log(numbers);
+console.log(doubled);
