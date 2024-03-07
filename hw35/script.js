@@ -70,4 +70,3 @@ if (age >= 18) {
 
 //Use this
 age >= 18 ? console.log("You can drive") : console.log("You cannot drive");
-
