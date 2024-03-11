@@ -34,3 +34,11 @@ const arrWithDuplicates = [1, 12, 2, 13, 4, 4, 13];
 const arrWithoutDuplicates = [...new Set(arrWithDuplicates)];
 
 console.log(arrWithoutDuplicates); // Output: [1, 12, 2, 13, 4]
+
+// Swap values using Destructuring
+
+let x = 7, y = 13;
+
+[x, y] = [y, x];
+
+console.log(x); // 13
