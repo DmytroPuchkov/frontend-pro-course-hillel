@@ -20,15 +20,10 @@ const jsonStr = '{"name": "John", "age": 25}';
 const person3 = JSON.parse(jsonStr);
 console.log(person3); // Output: {name: 'John', age: 25}
 
-// Object.freeze()
+// Map() Function
 
-const person7 = {
-  name: 'John', 
-  age: 25
-};
+const numbers8 = [1, 2, 3, 4];
+const doubled8 = numbers8.map(num => num * 2);
 
-Object.freeze(person7);
-
-person7.name = "Mark";
-
-console.log(person7); // Output: {name: 'John', age: 25}
+console.log(numbers8); // Output: [1, 2, 3, 4]
+console.log(doubled8); // Output: [2, 4, 6, 8]
