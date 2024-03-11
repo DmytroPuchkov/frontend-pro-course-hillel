@@ -39,3 +39,12 @@ console.log(person1.agePerson);
 const {namePerson, agePerson} = person1;
 console.log(namePerson);
 console.log(agePerson);
+
+// Set Default Values with Logical OR Operator
+
+function greet(name) {
+  name = name || 'Person';
+  console.log(`Hello, ${name}!`);
+}
+greet(); // Output: Hello, Person!
+greet("John"); // Output: Hello, John!
