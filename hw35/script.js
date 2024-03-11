@@ -22,3 +22,20 @@ const person = {
   profession: 'Programmer'
 }
 console.table(person);
+
+// Extract Object Properties with Destructuring
+
+const person1 = {
+  namePerson: 'John', 
+  agePerson: 25,
+  professionPerson: 'Programmer'
+}
+
+// Instead of this 👇
+console.log(person1.namePerson);
+console.log(person1.agePerson);
+
+// Use this👇
+const {namePerson, agePerson} = person1;
+console.log(namePerson);
+console.log(agePerson);
