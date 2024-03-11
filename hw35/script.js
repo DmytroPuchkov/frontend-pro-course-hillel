@@ -19,3 +19,11 @@ console.log(arr); //Output: ['H', 'e', 'l', 'l', 'o', '!']
 const jsonStr = '{"name": "John", "age": 25}';
 const person3 = JSON.parse(jsonStr);
 console.log(person3); // Output: {name: 'John', age: 25}
+
+// Map() Function
+
+const numbers3 = [1, 2, 3, 4];
+const doubled3 = numbers3.map(num => num * 2);
+
+console.log(numbers3); // Output: [1, 2, 3, 4]
+console.log(doubled3); // Output: [2, 4, 6, 8]
