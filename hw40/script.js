@@ -1,14 +1,14 @@
-const SIZE_SMALL = { price: 50, calories: 20 };
-const SIZE_LARGE = { price: 100, calories: 40 };
-
-const STUFFING_CHEESE = { price: 10, calories: 20 };
-const STUFFING_SALAD = { price: 20, calories: 5 };
-const STUFFING_POTATO = { price: 15, calories: 10 };
-
-const TOPPING_SAUCE = { price: 15, calories: 0 };
-const TOPPING_MAYO = { price: 20, calories: 5 };
-
 class Hamburger {
+  static SIZE_SMALL = { price: 50, calories: 20 };
+  static SIZE_LARGE = { price: 100, calories: 40 };
+
+  static STUFFING_CHEESE = { price: 10, calories: 20 };
+  static STUFFING_SALAD = { price: 20, calories: 5 };
+  static STUFFING_POTATO = { price: 15, calories: 10 };
+
+  static TOPPING_SAUCE = { price: 15, calories: 0 };
+  static TOPPING_MAYO = { price: 20, calories: 5 };
+
   constructor(size, stuffing) {
     this.size = size;
     this.stuffing = stuffing;
@@ -35,16 +35,16 @@ class Hamburger {
     for (let topping of this.toppings) {
       price += topping.price;
     }
-    
+
     return price;
   }
 }
 
 // маленький гамбургер з начинкою з сиру
-var hamburger = new Hamburger(SIZE_SMALL, STUFFING_CHEESE);
+var hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
 
 // добавка з майонезу
-hamburger.addTopping(TOPPING_MAYO);
+hamburger.addTopping(Hamburger.TOPPING_MAYO);
 
 // запитаємо скільки там калорій
 console.log("Calories: " + hamburger.calculateCalories());
@@ -53,7 +53,7 @@ console.log("Calories: " + hamburger.calculateCalories());
 console.log("Price: " + hamburger.calculatePrice());
 
 // я тут передумав і вирішив додати ще приправу
-hamburger.addTopping(TOPPING_SAUCE);
+hamburger.addTopping(Hamburger.TOPPING_SAUCE);
 
 // А скільки тепер коштує?
 console.log("Price with sauce: " + hamburger.calculatePrice());
