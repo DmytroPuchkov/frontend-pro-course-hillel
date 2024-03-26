@@ -19,26 +19,6 @@ class Hamburger {
     this.toppings.push(topping);
   }
 
-  // calculateCalories() {
-  //   let calories = this.size.calories + this.stuffing.calories;
-
-  //   for (let topping of this.toppings) {
-  //     calories += topping.calories;
-  //   }
-
-  //   return calories;
-  // }
-
-  // calculatePrice() {
-  //   let price = this.size.price + this.stuffing.price;
-
-  //   for (let topping of this.toppings) {
-  //     price += topping.price;
-  //   }
-
-  //   return price;
-  // }
-
   #calculate(prop) {
     let result = this.size[prop] + this.stuffing[prop];
 
@@ -59,7 +39,7 @@ class Hamburger {
 }
 
 // маленький гамбургер з начинкою з сиру
-var hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
+const hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
 
 // добавка з майонезу
 hamburger.addTopping(Hamburger.TOPPING_MAYO);
