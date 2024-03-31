@@ -1,0 +1,41 @@
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-inputs {
+  display: flex;
+  gap: 16px;
+}
+
+.container-diagram {
+  position: absolute;
+  bottom: 280px;
+  border: 1px solid black;
+  width: 42px;
+  height: 110px;
+}
+
+#green, #red {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+}
+
+#green {
+  background-color: green;
+  z-index: 1;
+}
+
+#red {
+  background-color: red;
+  z-index: 2;
+}
