@@ -4,16 +4,19 @@ const greenLine = document.getElementById('green');
 const redLine = document.getElementById('red');
 
 function calculateCommission(value) {
-  if (value < 20) return 2;
-  if (value < 50) return 4;
-  if (value < 75) return 6;
-  return 8;
+  let rate = null;
+
+  if (value < 20) rate = 0.02;
+  else if (value < 50) rate = 0.04;
+  else if (value < 75) rate = 0.06;
+  else rate = 0.08;
+
+  return value * rate;
 }
 
-function updateDiagram (value) {
+function updateDiagram(value) {
   const intValue = parseInt(value, 10);
-  const commissionPercentage = calculateCommission(intValue);
-  const commissionValue = (intValue * commissionPercentage) / 100;
+  const commissionValue = calculateCommission(intValue);
 
   input.value = intValue;
   slider.value = intValue;
