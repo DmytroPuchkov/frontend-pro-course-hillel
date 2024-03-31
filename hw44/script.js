@@ -4,12 +4,7 @@ const greenLine = document.getElementById('green');
 const redLine = document.getElementById('red');
 
 function calculateCommission(value) {
-  let rate = null;
-
-  if (value < 20) rate = 0.02;
-  else if (value < 50) rate = 0.04;
-  else if (value < 75) rate = 0.06;
-  else rate = 0.08;
+  const rate = value < 20 ? 0.02 : value < 50 ? 0.04 : value < 75 ? 0.06 : 0.08;
 
   return value * rate;
 }
