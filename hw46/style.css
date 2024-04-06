@@ -1,0 +1,20 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+button {
+  border: 0px;
+  padding: 16px 24px;
+  background-color: blueviolet;
+  color: white;
+}
+
+button:hover {
+  background-color: darkviolet;
+}
