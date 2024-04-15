@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 80px;
+}
+
+table {
+  border: 1px solid black;
+}
+
+tr, td {
+  border: 1px solid black;
+  padding: 24px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
