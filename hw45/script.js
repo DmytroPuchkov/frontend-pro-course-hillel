@@ -10,25 +10,23 @@ function createArray() {
 
 function createTable(container) {
   const numbers = createArray();
-  const table = document.querySelector(container);
-  const fragment = document.createDocumentFragment();
+  const table = document.createElement('div');
 
-  numbers.forEach((number) => {
+  console.log(table);
+  
+  table.classList.add(container);
+
+  const rows = numbers.map((number) => {
     const div = document.createElement('div');
 
     div.textContent = number;
-    div.style.width = '30px';
-    div.style.height = '30px';
-    div.style.padding = '4px';
-    div.style.textAlign = 'center'
-    div.style.color = 'red';
-    div.style.backgroundColor = 'black';
-    div.style.fontSize = '14px';
-
-    fragment.append(div);
+    div.classList.add('element');
+    
+    return div;
   });
 
-  table.append(fragment);
+  table.append(...rows);
+  document.body.prepend(table);
 }
 
-createTable('.table');
+createTable('table');
