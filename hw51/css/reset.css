@@ -1,0 +1,45 @@
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure,
+form, fieldset, legend, label,
+input, textarea, button,
+th, td {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+body, button, input, select, textarea {
+  font-family: sans-serif;
+}
+
+img {
+  vertical-align: middle;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+button, input, optgroup, select, textarea {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
