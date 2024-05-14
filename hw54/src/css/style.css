@@ -1,0 +1,159 @@
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 64px;
+}
+
+.container-title {
+  margin-bottom: 16px;
+  color: mediumpurple;
+  font-size: 14px;
+}
+
+.list-item {
+  font-weight: bolder;
+  padding: 4px 16px;
+}
+
+.list-item:hover {
+  background-color: mediumpurple;
+  color: white;
+  border-radius: 16px;
+}
+
+.shop {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.container-categories {
+  width: 160px;
+  height: 400px;
+  padding: 4px;
+}
+
+.container-products {
+  width: 580px;
+  padding: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.container-info {
+  width: 220px;
+  padding: 4px;
+}
+
+.product {
+  width: 180px;
+  background-color: white;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  border-radius: 16px;
+  border: 1px solid #f2f2f2;
+}
+
+.product-info {
+  border: 1px solid yellowgreen;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: yellowgreen;
+  color: white;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+.description {
+  font-size: 13px;
+}
+
+.btn {
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 16px 48px;
+  font-weight: bolder;
+  border-radius: 24px;
+}
+
+[data-action="info"] {
+  background-color: mediumpurple;
+}
+
+[data-action="buy"] {
+  background-color: yellowgreen;
+}
+
+.hide {
+  display: none;
+}
+
+.info {
+  width: 200px;
+  height: 460px;
+  padding: 24px;
+  background-color: white;
+  border: none;
+}
+
+.price {
+  color: green;
+  font-weight: bolder;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form > * {
+  border: 2px solid yellowgreen;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.order-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 48px;
+  padding: 48px;
+  background-color: #fcfce4;
+  border-radius: 8px;
+}
+
+.order-title {
+  font-size: 18px;
+}
+
+.order-title-header {
+  font-weight: bolder;
+}
