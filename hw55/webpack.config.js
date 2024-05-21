@@ -1,18 +1,20 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const useLoaders = require('./build/useLoaders');
+const usePlagins = require('./build/usePlagins');
 
 module.exports = (env) => {
   const mode = env.NODE_ENV;
-  const isDev = () => process.env.NODE_ENV === "development";
-  const devServer = { port: 4000, open: true };
+  const devServer = { port: 9000, open: true };
 
   return {
     mode,
-    
+
     entry: {
       app: path.resolve(__dirname, 'src', 'app.js'),
-      widget: path.resolve(__dirname, 'src/lib', 'widget.js'),
+      appTS: path.resolve(__dirname, 'src', 'appTS.ts'),
+      reactApp: path.resolve(__dirname, 'src', 'react.jsx'),
     },
 
     output: {
@@ -21,12 +23,18 @@ module.exports = (env) => {
       clean: true
     },
 
-    plugins: [
-      new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src/index.html'),
-      }),
-      new webpack.EnvironmentPlugin({ NODE_ENV: env.NODE_ENV })
-    ],
+    plugins: usePlagins(env),
+
+    module: {
+      rules: useLoaders(env)
+    },
+
+    optimization: !mode === 'production' ? {
+      minimizer: [
+        `...`,
+        new CssMinimizerPlugin(),
+      ],
+    } : undefined,
 
     devServer
   };

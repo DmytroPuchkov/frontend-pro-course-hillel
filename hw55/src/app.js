@@ -3,7 +3,7 @@ import createNode from './parts/createNode.js';
 import createButton from './parts/createButton.js';
 import createProduct from './parts/createProduct.js';
 import clearContainer from './utils/clearContainer.js';
-import './css/index.css';
+import './styles.scss';
 
 const shop = document.querySelector('.shop');
 const productsContainer = document.querySelector('.container-products');
@@ -101,3 +101,10 @@ const onClickHandler = (event) => {
 };
 
 shop.addEventListener('click', onClickHandler);
+
+async function fetchPayload() {
+  const payload = await Promise.resolve(JSON.stringify({ a: 1, b: 2 }));
+  console.log(payload, 'payload');
+}
+
+fetchPayload();

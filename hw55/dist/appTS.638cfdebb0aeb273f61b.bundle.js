@@ -1,0 +1,1 @@
+console.log("The sum of ".concat(5," and ").concat(10," is ").concat(15));
