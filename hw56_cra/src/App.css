@@ -1,0 +1,41 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: darkslateblue;
+}
+
+.main-contant {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  background-color:darkmagenta;
+  width: 320px;
+}
+
+.main-container {
+  background-color: darkorchid;
+  flex: 1;
+}
+
+.footer {
+  background-color: indigo;
+}
+
+.content-center {
+  text-align: center;
+}
+
+.font-primary {
+  color: white;
+  font-size: 16px;
+}
+
+.p24 {
+  padding: 24px;
+}
