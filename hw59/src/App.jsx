@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import './App.css'
 
-const App = () => {
+import TodoList from './components/TodoList'
+import AddTodo from './components/AddTodo'
+import ClearCompleted from './components/ClearCompleted'
+
+function App() {
+
   const [todos, setTodos] = useState([])
   const [newTodo, setNewTodo] = useState('')
 
@@ -27,30 +32,12 @@ const App = () => {
   return (
     <div className='todo caveat'>
       <h1>Перелік справ</h1>
-      <ul className='caveat'>
-        {todos.map((todo, index) => (
-          <li
-            key={index}
-            onClick={() => toggleTodo(index)}
-            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
-          >
-            {index + 1}. {todo.text}
-          </li>
-        ))}
-      </ul>
-      <div className="add">
-        <input
-          className='input caveat'
-          placeholder='Що вам треба зробити?'
-          type='text'
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-        />
-        <button className='btn caveat' onClick={addTodo}>Додати</button>
-      </div>
-        <button className='btn btn-clear caveat' onClick={clearCompleted}>Видалити всі зроблені справи</button>
+      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <AddTodo newTodo={newTodo} setNewTodo={setNewTodo} addTodo={addTodo} />
+      <ClearCompleted clearCompleted={clearCompleted} />
     </div>
   )
+
 }
 
 export default App;
