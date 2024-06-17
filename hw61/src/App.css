@@ -1,0 +1,59 @@
+body {
+  background-color: #323438;
+  color: #ffffff;
+}
+
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 2px solid #3F4146;
+  margin-bottom: 24px;
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+}
+
+.form-container {
+  margin-top: 24px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  margin: 16px 0;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+button {
+  border: none;
+  padding: 8px 16px;
+  background-color: #DB4444;
+  color: #430000;
+}
+
+.btn-add {
+  background-color: #A2CD46;
+  color: #2b3e00;
+}
